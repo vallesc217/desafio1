@@ -7,9 +7,11 @@ def cargar_datos(ruta):
     print(resultado)
     return resultado
 
+# decoradores y rutas de aplicacion para consumir la API
+
 app=Flask(__name__,template_folder='Template')
 
-@app.route('/',methods=['GET'])
+@app.route('/',methods=['GET']) #metodo y verbos http GET para obtener el Hola Mundo
 def welcome():
     return 'Hola mundo'
 

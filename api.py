@@ -2,7 +2,7 @@ from flask import Flask, request
 import json
 import pandas as pd 
 
-def cargar_datos(ruta):
+def cargar_datos(ruta):  # funcion para cargar los datos de origen .json
     resultado=pd.read_json(ruta)
     print(resultado)
     return resultado
@@ -50,4 +50,4 @@ def registrar_pokemon():
 
 if __name__=='__main__':
     ruta='pkmon.json'
-    app.run(host='0.0.0.0',port=9000,debug=True)
+    app.run(host='0.0.0.0',port=9000,debug=True)  # configuracion de servidor http
